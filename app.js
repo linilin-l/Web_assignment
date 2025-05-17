@@ -7,7 +7,7 @@ var http = require('http');
 var socketIo = require('socket.io');
 
 // 路由
-var indexRouter = require('./routes/index.html');
+var indexRouter = require('./routes/index');
 var quizRouter = require('./routes/quiz'); // 新增问答路由
 
 var app = express();
@@ -19,7 +19,7 @@ let onlinePlayers = new Map();
 
 // 设置静态文件目录
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views'))); // 添加这行，使views目录也可以直接访问html文件
+app.use(express.static(path.join(__dirname, 'views')));
 
 // 中间件
 app.use(logger('dev'));
@@ -30,6 +30,11 @@ app.use(cookieParser());
 // 路由绑定
 app.use('/', indexRouter);
 app.use('/quiz', quizRouter);
+
+// 修改根路由，使用 sendFile 代替 render
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
 // Socket.IO 实时逻辑
 io.on('connection', (socket) => {

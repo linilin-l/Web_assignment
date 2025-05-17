@@ -6,8 +6,8 @@
     <title>Profile page</title>
     <!-- 引入 Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./public/stylesheets/style.css">
-    <link rel="stylesheet" href="./public/stylesheets/slider.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/slider.css">
     <!-- 自定义样式 -->
     <style>
         /* 导航栏样式 */
@@ -210,7 +210,7 @@
     <!-- 导航栏 -->
     <header>
         <ul id="nav">
-            <li><a href="/" class="active">Introduction</a></li>
+            <li><a href="#home" class="active">Introduction</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#quiz">Quiz</a></li>
         </ul>
@@ -225,7 +225,7 @@
 
         <!-- 修改后的个人照片展示区 -->
         <div class="profile-section">
-            <img src="./public/images/profile.png" alt="profile" class="profile-img">
+            <img src="/images/profile.png" alt="profile" class="profile-img">
         </div>
 
         <div class="slider-container" style="display: none;">
@@ -248,24 +248,24 @@
     <!-- 引入 Bootstrap 脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 打字机效果脚本 -->
-    <script src="./public/javascripts/typing.js"></script>
+    <script src="/javascripts/typing.js"></script>
     <!-- 照片数据 -->
     <script>
         // 照片数据
         const photoData = {
             real: [
-                './public/images/real1.jpg',
-                './public/images/real2.jpg',
-                './public/images/real3.jpg',
-                './public/images/real4.jpg'
+                '/images/real1.jpg',
+                '/images/real2.jpg',
+                '/images/real3.jpg',
+                '/images/real4.jpg'
             ],
             virtual: [
-                './public/images/stardew-valley.jpg',
-                './public/images/detroit.jpg',
-                './public/images/miku.jpg',
-                './public/images/game1.jpg',
-                './public/images/game2.jpg',
-                './public/images/anime1.jpg'
+                '/images/stardew-valley.jpg',
+                '/images/detroit.jpg',
+                '/images/miku.jpg',
+                '/images/game1.jpg',
+                '/images/game2.jpg',
+                '/images/anime1.jpg'
             ]
         };
 
@@ -302,6 +302,6 @@
         // 初始显示real照片
         displayPhotos('real');
     </script>
-    <script src="./public/javascripts/slider.js"></script>
+    <script src="/javascripts/slider.js"></script>
 </body>
 </html>
