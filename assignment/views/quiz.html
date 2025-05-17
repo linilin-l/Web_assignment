@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/quiz.css">
+</head>
+
+<body>
+    <header>
+        <ul id="nav">
+            <li><a href="/">Introduction</a></li>
+            <li><a href="/users">About Me</a></li>
+            <li class="active"><a href="/form">Quiz</a></li>
+        </ul>
+    </header>
+    <div class="quiz-container">
+        <h1>Welcome to Quiz!</h1>
+        <form id="name-form">
+            <label for="name">Give your name:</label>
+            <input type="text" id="name" name="name" required>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="player-list" class="hidden">
+            <h2>Challenge a player!</h2>
+            <ul id="player-names"></ul>
+        </div>
+        <div id="challenge-modal" class="hidden">
+            <h2>[challengerName] challenges you!</h2>
+            <button id="accept-challenge">Accept</button>
+            <button id="reject-challenge">Reject</button>
+        </div>
+        <div id="question-section" class="hidden">
+            <h2 id="question"></h2>
+            <ul id="answer-options"></ul>
+        </div>
+        <div id="result-section" class="hidden">
+            <h2>[opponentName]: <span id="opponent-score">0</span> points, You: <span id="your-score">0</span> points</h2>
+            <p id="result-message"></p>
+            <button id="next-question">Next Question</button>
+        </div>
+        <div id="game-over-section" class="hidden">
+            <h2>[opponentName]: <span id="final-opponent-score">0</span> points, You: <span id="final-your-score">0</span> points</h2>
+            <p id="game-over-message"></p>
+            <button id="restart-game">Back to start</button>
+        </div>
+    </div>
+    <script src="/javascripts/quiz.js"></script>
+</body>
+
+</html>

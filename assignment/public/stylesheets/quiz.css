@@ -1,0 +1,28 @@
+.quiz-container {
+    text-align: center;
+    padding: 50px;
+}
+
+#name-form {
+    margin-bottom: 30px;
+}
+
+#player-list,
+#challenge-modal,
+#question-section,
+#result-section,
+#game-over-section {
+    margin-bottom: 30px;
+}
+
+#answer-options {
+    list-style-type: none;
+    padding: 0;
+}
+
+#answer-options li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
